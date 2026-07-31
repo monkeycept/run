@@ -56,7 +56,7 @@ interface SedanSportsProps {
     rotation?: Tuple3
 }
 
-function SedanSports({ position, rotation }: SedanSportsProps, ref: ForwardedRef<RigidVehicle>) {
+function SedanSports({ children, position, rotation }: SedanSportsProps, ref: ForwardedRef<RigidVehicle>) {
     const { nodes } = useGLTF(model) as unknown as GLTFResult
     const [chassisRef, wheelsRef, vehicle] = useRigidVehicle({
         rotation,
@@ -98,6 +98,7 @@ function SedanSports({ position, rotation }: SedanSportsProps, ref: ForwardedRef
                         object={carMaterial}
                     />
                 </mesh>
+                {children}
             </group>
             <group
                 dispose={null}

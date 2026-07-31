@@ -43,8 +43,9 @@ export default function useSteeringBehaviour({
         speeding: 1,
         playerStopTime: 0,
         time: 0,
-        isChicken: random.boolean(.75),
-        chickenLimit: random.float(.85, 1)
+        // Grok AI driver inspired: higher chance of aggressive "chicken" driving
+        isChicken: random.boolean(.9),
+        chickenLimit: random.float(.7, 1)
     }), [])
 
     useFrame((state, delta) => {

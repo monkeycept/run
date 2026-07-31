@@ -50,10 +50,10 @@ export default function Ui() {
                 className="fixed md:left-[6vw] md:right-[6vw] left-8 right-8  md:bottom-[7vh] bottom-10"
             >
                 <h1 className=" text-[1.15em] leading-[1.1]">
-                    Untitled infinite runner
+                    Ferrari Infinite Runner • Grok AI Driver
                 </h1>
                 <p className=" mt-[.1em] leading-normal text-[1em]">
-                    {isTouch ? "Drag to steer towards " : "Use keyboard to reach "} the target destination ahead.
+                    {isTouch ? "Drag to steer towards " : "Use keyboard to reach "} the target destination ahead. Powered by Grok AI.
                 </p>
             </div>
 

@@ -10,8 +10,8 @@ import { damp } from "three/src/math/MathUtils.js"
 import { Object3D, PointLight } from "three/webgpu"
 
 import useTrafficClient from "../traffic/hooks/useTrafficClient"
+import SedanSports from "../traffic/SedanSports"
 import Smoker from "./Smoker"
-import Suv from "./Suv"
 import { useControls } from "./useControls"
 import usePlayerAlive from "./usePlayerAlive"
 
@@ -99,7 +99,8 @@ export default function Player({
 
     return (
         <>
-            <Suv
+            {/* Ferrari (sports sedan model) driven by Grok AI inspired controls */}
+            <SedanSports
                 ref={setVehicle}
                 position={position}
                 rotation={rotation}
@@ -124,7 +125,7 @@ export default function Player({
                         color={"#b50c00"}
                     />
                 ))}
-            </Suv>
+            </SedanSports>
             <Smoker />
         </>
     )
